@@ -1,0 +1,195 @@
+//init
+*{
+   color: inherit;
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   list-style: none;
+   text-decoration: none;
+   font-family: LatoReg;
+   outline: none;
+}
+body{
+  background-color: #eee;
+  // background-image: url(../img/geo3.png);
+}
+.container{
+   width: 1000px;
+   margin: auto;
+   position: relative;
+}
+.parent-container{
+   padding-top: 80px;
+   margin-bottom: 400px;
+}
+@font-face {
+  font-family: LatoBold;
+  src: url("../font/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: LatoReg;
+  src: url("../font/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: RubikReg;
+  src: url("../font/Rubik-Regular.ttf");
+}
+.green{
+   background-color: rgb(46, 158, 77);
+}
+.red{
+   background-color: rgb(82, 26, 26);
+}
+.grey{
+   background-color: #333;
+}
+.cream{
+   background-color: rgb(238, 216, 187);
+}
+.black{
+  background: #000;
+}
+//init-vars
+
+//navbar
+.navbar{
+   position: fixed;
+   width: 100%;
+   height: 60px;
+   background-color: #151515;
+   padding: 15px 20px;
+   z-index: 10;
+   .navbar-logo{
+      font-size: 22px;
+      color: #eee;
+      float: left;
+      vertical-align: top;
+      font-family: LatoReg;
+      letter-spacing: -1px;
+   }
+   .search-container{
+      float: right;
+       height: 25px;
+       margin: 5px 10px;
+       position: relative;
+       .close-search{
+         position: absolute;
+         width: 10px;
+         height: 0;
+         border: 1px solid #eee;
+         transform: rotateZ(40deg);
+         bottom: 6px;
+         overflow: hidden;
+         right: -5px;
+         transition: all .6s cubic-bezier(0.79, -0.26, 0.14, 1.25);
+         cursor: pointer;
+         font-size: 22px;
+       }
+      #searchInput{
+         width: 13px;
+         height: 13px;
+         padding: 6px;
+         background: #111;
+         border-radius: 50%;
+         border: 2px solid #eee;
+         position: relative;
+         cursor: pointer;
+         outline: none;
+         transition: border .7s ease, border-radius .5s cubic-bezier(0.88, -0.1, 0.19, 0.98), width .4s cubic-bezier(1, -0.05, 0.2, 1.07), background .3s ease;
+      }
+      #searchInput.active{
+         width: 180px;
+         height: 25px;
+         border-radius: 5px;
+         cursor: text;
+         background: #eee;
+         border: 2px solid transparent;
+      }
+      .close-search.active{
+         width: 20px;
+         height: 20px;
+         right: 190px;
+         border-radius: 50%;
+         color: #eee;
+         text-align: center;
+         top: 3px;
+         padding: 0px 0px;
+         line-height: 15px;
+         transform: rotateZ(360deg);
+      }
+   }
+   .navbar-handle{
+      margin: 4px 0;
+      width: 40px;
+      display: block;
+      float: right;
+      vertical-align: top;
+      cursor: pointer;
+      transition: all .5s cubic-bezier(0.91, -0.33, 0.24, 1.01);
+      // border: 1px solid #eee;
+      .navbar-handle-lines{
+         margin: 5px;
+         position: relative;
+         border-radius: 5px;
+         border: 1px solid #eee;
+         transition: all .3s ease;
+      }
+   }
+   .navbar-handle.active{
+     transform: rotateZ(180deg) scale(0.75);
+     top: 1px;
+     position: relative;
+     #line1{
+       transform: rotateZ(150deg);
+       width: 15px;
+       top: 3px;
+       border: 1px solid red;
+     }
+     #line2{
+       transform: rotateZ(180deg);
+       width: 25px;
+       border: 1px solid red;
+     }
+     #line3{
+       transform: rotateZ(-150deg);
+       width: 15px;
+       top: -3px;
+       border: 1px solid red;
+     }
+   }
+   .navbar-options{
+     display: inline-block;
+     float: right;
+     padding: 6px 0px;
+     width: 0px;
+     overflow: hidden;
+     transition: all .4s ease;
+     text-align: right;
+     li{
+       display: inline-block;
+       color: #eee;
+       margin: 0px -10px;
+       cursor: pointer;
+       font-size: 13px;
+       transition: all .4s ease;
+      //  transition-delay: .1s;
+       letter-spacing: -5px;
+     }
+   }
+   .navbar-options.active{
+     width: 310px;
+     opacity: 1;
+     height: 35px;
+     li{
+       display: inline-block;
+       color: #eee;
+       margin: 0px 10px;
+       cursor: pointer;
+       font-size: 13px;
+       letter-spacing: normal;
+     }
+   }
+}
+//navbar
+
+@import 'login';

@@ -1,0 +1,39 @@
+.login-container{
+  width: 450px;
+  margin: 60px auto;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  .medium-title{
+    background-color: #333;
+    padding: 10px 30px;
+    color: #eee;
+    font-size: 24px;
+    text-align: center;
+  }
+  .form-group{
+    padding: 10px 30px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .input-header{
+    text-align: right;
+    width: 90px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .fill-input{
+    width: 180px;
+    height: 25px;
+    padding-left: 10px;
+  }
+  .form-btn{
+    background: #333;
+    color: #eee;
+    border: none;
+    padding: 5px 20px;
+    margin: 0px 10px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+}
