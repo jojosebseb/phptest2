@@ -4,11 +4,11 @@
       <div class="medium-title">
         Login
       </div>
-      <form class="" action="index.php" method="post">
+      <form class="" action="doLogin.php" method="post">
 
 
         <div class="form-group">
-          <span class="input-header">Username :</span>
+          <span class="input-header">Usernameasdass :</span>
           <input type="text"  value="" class="fill-input" name="uname">
         </div>
         <div class="form-group">
